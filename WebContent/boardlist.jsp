@@ -18,8 +18,8 @@
 	
 	try {
 		request.setCharacterEncoding("UTF-8");
-	    response.setContentType("application/json;charset=UTF-8");
-	    response.setCharacterEncoding("UTF-8");
+	        response.setContentType("application/json;charset=UTF-8");
+	        response.setCharacterEncoding("UTF-8");
 		
 	
 		con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/test", "test", "test");
@@ -51,9 +51,9 @@
 		}
 		
 		request.setAttribute("boardList", aList);
-	    ServletContext context =getServletContext();
-	    RequestDispatcher dispatcher = context.getRequestDispatcher("/boardlistview.jsp");
-	    dispatcher.forward(request, response);
+	        ServletContext context =getServletContext();
+	        RequestDispatcher dispatcher = context.getRequestDispatcher("/boardlistview.jsp");
+	        dispatcher.forward(request, response);
 					
 	} catch (Exception e) {
 		System.out.println(e.getMessage());
