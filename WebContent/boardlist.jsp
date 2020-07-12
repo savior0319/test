@@ -25,13 +25,13 @@
 		con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/test", "test", "test");
 		
 		StringBuffer sb = new StringBuffer();
-		sb.append("   SELECT A.BOARD_SEQ   AS boardSeq,    					         	   ");
+		sb.append("   SELECT A.BOARD_SEQ   AS boardSeq,    					           ");
 		sb.append("          A.TITLE   AS title,    					                   ");
-		sb.append("          A.CONTENT     AS content,     						   		   ");
-		sb.append("          A.INSERT_ID   AS insertId,   				 				   ");
+		sb.append("          A.CONTENT     AS content,     						   ");
+		sb.append("          A.INSERT_ID   AS insertId,   				 		   ");
 		sb.append("          DATE_FORMAT(A.INSERT_DATE, '%Y/%m/%d %H:%i') AS insertDate,   ");
-		sb.append("          A.DELETE_YN   AS deleteYn     						     	   ");
-		sb.append("    FROM  TBOARD A;                     						           ");
+		sb.append("          A.DELETE_YN   AS deleteYn     						   ");
+		sb.append("    FROM  TBOARD A;                     						   ");
 		
 		pstmt = con.prepareStatement(sb.toString());
 		rs  = pstmt.executeQuery();
