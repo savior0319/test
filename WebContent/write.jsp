@@ -13,7 +13,7 @@
 	PreparedStatement pstmt = null;
 	
 	try {
-		request.setCharacterEncoding("UTF-8");
+	    request.setCharacterEncoding("UTF-8");
 	    response.setContentType("application/json;charset=UTF-8");
 	    response.setCharacterEncoding("UTF-8");
 		
